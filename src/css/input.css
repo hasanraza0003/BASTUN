@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@layer utilities {
+        .gradient-bg {
+            background: linear-gradient(90deg, #00229e, #6e1299 47.92%, #fe0094);
+        }
+
+        .bg-main{
+            background-color: #0c0e2b;
+        }
+}
