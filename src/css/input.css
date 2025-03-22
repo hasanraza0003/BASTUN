@@ -1,11 +1,45 @@
 @import "tailwindcss";
 
 @layer utilities {
-        .gradient-bg {
-            background: linear-gradient(90deg, #00229e, #6e1299 47.92%, #fe0094);
-        }
+  .gradient-bg {
+    background: linear-gradient(90deg, #00229e, #6e1299 47.92%, #fe0094);
+  }
+  .bg-main {
+    background-color: #0c0e2b;
+  }
 
-        .bg-main{
-            background-color: #0c0e2b;
-        }
+  @keyframes rotate360 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-rotate360 {
+    animation: rotate360 6s linear infinite;
+  }
+
+  .gradient-icon {
+    background: linear-gradient(90deg, #00229e, #6e1299 47.92%, #fe0094);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @keyframes infinite-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-infinite-scroll {
+    display: flex;
+    white-space: nowrap;
+    animation: infinite-scroll 15s linear infinite;
+}
+
 }
