@@ -8,9 +8,10 @@
         <script src="https://kit.fontawesome.com/3182d6ec23.js" crossorigin="anonymous"></script>
         <link href="./src/css/output.css" rel="stylesheet">
 </head>
-<body class="w-full overflow-x-hidden bg-white">
+
+<body class="w-screen overflow-x-hidden bg-white">
         <!-- Top Section Start  -->
-        <section id="topbar" class="w-full h-fit fixed flex justify-center items-center">
+        <section id="topbar" class="w-full h-fit fixed hidden md:flex justify-center items-center z-100">
                 <ul class="w-1/2 text-black flex justify-between">
                         <li><i class="fa-solid m-4 fa-phone-volume gradient-icon text-[20px]"></i><span>(000)
                                         967-237-96</span></li>
@@ -25,14 +26,14 @@
         <!-- Top Section End  -->
 
         <!-- navbar start -->
-        <nav id="navbar" class="w-full h-auto px-72 flex justify-center items-center fixed top-12 z-100">
+        <!-- <nav id="navbar" class="w-full h-auto lg:px-72 flex justify-center items-center fixed lg:top-12 top-0 z-100">
                 <div id="navbar_main"
-                        class="gradient-bg w-full flex justify-between items-center px-3 py-5 rounded-lg ">
+                        class="gradient-bg w-full flex justify-between items-center px-3 py-5 lg:rounded-lg ">
                         <div class="w-fit">
                                 <img src="./src/img/Logo_1.webp" alt="Logo">
                         </div>
 
-                        <div class="w-4/6 flex justify-center items-center">
+                        <div class="w-4/6 justify-center items-center hidden lg:flex">
                                 <ul class="w-8/12 text-white text-sm font-bold flex items-center justify-between">
                                         <li>HOME <span><i class="fa-solid fa-arrow-down-long text-[9px]"></i></span>
                                         </li>
@@ -51,93 +52,158 @@
                                 <span class="text-white/80 border px-3 py-2 rounded-full "><i
                                                 class="fa-solid fa-bag-shopping "></i></span>
                                 <button
-                                        class="w-fit bg-white border border-white rounded-lg text-black font-semibold font-serif text-sm py-4 px-9 ">GET
+                                        class="w-fit bg-white border border-white rounded-lg text-black font-semibold font-serif text-sm py-4 px-9 hidden md:block ">GET
                                         FREE QUATE</button>
                         </div>
 
+                </div>
+        </nav> -->
+
+        <nav id="navbar" class="w-screen h-auto lg:px-72 flex justify-center items-center fixed md:top-12 top-0 z-100">
+                <div id="navbar_main"
+                        class="gradient-bg w-full flex justify-between items-center px-3 py-5 lg:rounded-lg">
+                        <div class="w-fit">
+                                <img src="./src/img/Logo_1.webp" alt="Logo" class="h-10 md:h-12">
+                        </div>
+
+                        <div class="w-4/6 justify-center items-center hidden lg:flex">
+                                <ul class="w-8/12 text-white text-sm font-bold flex items-center justify-between">
+                                        <li>HOME <span><i class="fa-solid fa-arrow-down-long text-[9px]"></i></span>
+                                        </li>
+                                        <li>PAGES <span><i class="fa-solid fa-arrow-down-long text-[9px]"></i></span>
+                                        </li>
+                                        <li>ABOUT</li>
+                                        <li>ECOMMERCE <span><i
+                                                                class="fa-solid fa-arrow-down-long text-[9px]"></i></span>
+                                        </li>
+                                        <li>BLOG</li>
+                                        <li>CONTACT</li>
+                                </ul>
+                        </div>
+
+                        <div class="w-fit flex justify-center items-center gap-3">
+                                <span class="text-white/80 border px-3 py-2 rounded-full hidden md:block"><i
+                                                class="fa-solid fa-bag-shopping"></i></span>
+                                <button
+                                        class="hidden md:block bg-white border border-white rounded-lg text-black font-semibold font-serif text-sm py-2 px-6">GET
+                                        FREE QUOTE</button>
+                                <button id="menu-toggle" class="lg:hidden text-white text-2xl"><i
+                                                class="fa-solid fa-bars"></i></button>
+                        </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobile-menu"
+                        class="lg:hidden fixed top-0 left-0 w-screen h-full bg-black bg-opacity-90 hidden flex-col items-center justify-center text-white text-xl space-y-6">
+                        <button id="menu-close" class="absolute top-5 right-5 text-3xl">&times;</button>
+                        <ul class="space-y-4 text-center">
+                                <li>HOME</li>
+                                <li>PAGES</li>
+                                <li>ABOUT</li>
+                                <li>ECOMMERCE</li>
+                                <li>BLOG</li>
+                                <li>CONTACT</li>
+                        </ul>
                 </div>
         </nav>
         <!-- navbar end  -->
 
         <!-- hero section start  -->
-        <section class="w-full h-full flex bg-white">
-
-                <div class="w-1/2 text-black flex flex-col justify-center items-start pl-72 space-y-10">
-                        <h1 class="text-8xl font-bold">NAVIGATION SUCCESS TOGETHER</h1>
-                        <p class="font-semibold text-xl pr-40">Sagittis purus amet volutpat consequat mauris nunc congue
-                                nisi and tortor.</p>
-                        <button class="gradient-bg text-[13px] font-bold font-serif py-4 px-10 rounded-lg text-white ">OUR
-                                ALL
-                                SERVICES</button>
+        <section class="w-full h-full flex flex-col md:flex-row bg-white relative top-16 md:top-0">
+                <!-- Left Content -->
+                <div
+                        class="w-full md:w-1/2 text-black flex flex-col justify-center items-start px-6 md:pl-72 space-y-6 md:space-y-10 py-10 md:py-0">
+                        <h1 class="text-4xl md:text-8xl font-bold">NAVIGATION SUCCESS TOGETHER</h1>
+                        <p class="font-semibold text-lg md:text-xl pr-4 md:pr-40">
+                                Sagittis purus amet volutpat consequat mauris nunc congue nisi and tortor.
+                        </p>
+                        <button
+                                class="gradient-bg text-sm md:text-[13px] font-bold font-serif py-3 md:py-4 px-8 md:px-10 rounded-lg text-white">
+                                OUR ALL SERVICES
+                        </button>
                 </div>
 
-                <div class="w-1/2">
-                        <img src="/src/img/herobanner__5.webp" alt="HeroSection">
+                <!-- Right Image -->
+                <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+                        <img src="/src/img/herobanner__5.webp" alt="HeroSection" class="w-full md:w-auto" />
                 </div>
 
-                <div class="flex justify-center items-center absolute top-[50%] left-[46%]">
-                        <img src="./src/img/hero__badge_1.webp" alt="Main Badge" class="relative animate-rotate360">
-                        <img src="/src/img/brand__badge__inner.webp" alt="Inner" class="absolute">
+                <!-- Floating Badges -->
+                <div
+                        class="flex justify-center items-center absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2">
+                        <img src="./src/img/hero__badge_1.webp" alt="Main Badge"
+                                class="relative animate-rotate360 w-20 md:w-auto" />
+                        <img src="/src/img/brand__badge__inner.webp" alt="Inner" class="absolute w-5 md:w-16 " />
                 </div>
         </section>
+
         <!-- hero section end  -->
 
         <!-- Logo Carousel Animation Start  -->
-        <div class="h-fit w-full flex items-center relative -top-5">
-                <div class="bg-main w-full py-10 inline-flex flex-nowrap relative rotate-1">
+        <div class="w-screen flex items-center relative -top-5">
+                <div class="bg-main w-full py-6 md:py-10 flex flex-nowrap rotate-1">
+                        <!-- Marquee Container -->
                         <div
-                                class="flex items-center justify-center md:justify-start animate-infinite-scroll space-x-20">
-                                <img src="./src/img/brand__1.webp" alt="Logo" class="h-8" />
-                                <img src="./src/img/brand__2.webp" alt="Shape" class="h-8" />
-                                <img src="./src/img/brand__1.webp" alt="Logo" class="h-8" />
-                                <img src="./src/img/brand__2.webp" alt="Shape" class="h-8" />
-                                <img src="./src/img/brand__1.webp" alt="Logo" class="h-8" />
-                                <img src="./src/img/brand__2.webp" alt="Shape" class="h-8" />
+                                class="flex items-center justify-center md:justify-start space-x-10 md:space-x-20 animate-infinite-scroll">
+                                <img src="./src/img/brand__1.webp" alt="Logo" class="h-6 md:h-8" />
+                                <img src="./src/img/brand__2.webp" alt="Shape" class="h-6 md:h-8" />
+                                <img src="./src/img/brand__1.webp" alt="Logo" class="h-6 md:h-8" />
+                                <img src="./src/img/brand__2.webp" alt="Shape" class="h-6 md:h-8 hidden md:block" />
+                                <img src="./src/img/brand__1.webp" alt="Logo" class="h-6 md:h-8 hidden md:block" />
+                                <img src="./src/img/brand__2.webp" alt="Shape" class="h-6 md:h-8 hidden md:block" />
                         </div>
-                        <div class="flex items-center justify-center md:justify-start animate-infinite-scroll space-x-20"
+                        <!-- Duplicate for Infinite Scroll Effect -->
+                        <div class="flex items-center justify-center md:justify-start space-x-10 md:space-x-20 animate-infinite-scroll"
                                 aria-hidden="true">
-                                <img src="./src/img/brand__1.webp" alt="Logo" class="h-8" />
-                                <img src="./src/img/brand__2.webp" alt="Shape" class="h-8" />
-                                <img src="./src/img/brand__1.webp" alt="Logo" class="h-8" />
-                                <img src="./src/img/brand__2.webp" alt="Shape" class="h-8" />
-                                <img src="./src/img/brand__1.webp" alt="Logo" class="h-8" />
-                                <img src="./src/img/brand__2.webp" alt="Shape" class="h-8" />
+                                <img src="./src/img/brand__1.webp" alt="Logo" class="h-6 md:h-8" />
+                                <img src="./src/img/brand__2.webp" alt="Shape" class="h-6 md:h-8" />
+                                <img src="./src/img/brand__1.webp" alt="Logo" class="h-6 md:h-8" />
+                                <img src="./src/img/brand__2.webp" alt="Shape" class="h-6 md:h-8 hidden md:block" />
+                                <img src="./src/img/brand__1.webp" alt="Logo" class="h-6 md:h-8 hidden md:block" />
+                                <img src="./src/img/brand__2.webp" alt="Shape" class="h-6 md:h-8 hidden md:block" />
                         </div>
                 </div>
         </div>
         <!-- Logo Carousel Animation End  -->
 
         <!-- About Section Start  -->
-        <section class="w-full h-screen bg-white px-72 flex justify-between items-center gap-20 text-black">
-                <div class="w-full relative">
-                        <img src="./src/img/about__2.webp" alt="About_Main_Img">
+        <section
+                class="w-full h-screen bg-white px-6 md:px-72 flex flex-col md:flex-row justify-between items-center gap-10 md:gap-20 text-black">
+                <div class="w-full relative flex justify-center md:justify-start">
+                        <img src="./src/img/about__2.webp" alt="About_Main_Img" class="w-full md:w-auto">
                         <img src="./src/img/about__small__img__2.webp" alt="About_Icon"
-                                class="absolute top-16 right-40">
-                        <h2 class="text-8xl font-bold absolute bottom-10">About Us</h2>
+                                class="absolute top-10 md:top-16 right-10 md:right-40 w-16 md:w-auto">
+                        <h2 class="text-5xl md:text-8xl font-bold absolute bottom-6 md:bottom-10">About Us</h2>
                 </div>
-                <div class="w-full space-y-8">
-                        <button class="border border-purple-400/20 rounded-full px-7 py-2 text-md gradient-icon">About
-                                Company</button>
-                        <h2 class="text-4xl font-bold leading-12">QUALITY CONSULATION FOR SECURE BUSINESS. WE 32 YEAR OF
-                                EXPRIENCE.</h2>
-                        <div class="flex gap-10">
-                                <div class="w-1/3 h-fit relative gradient-bg py-10 rounded-lg text-center ">
-                                        <i class="fa-solid fa-arrow-up absolute top-7 right-12 text-lg rotate-45"
+
+                <div class="w-full space-y-6 md:space-y-8 px-4 md:px-0">
+                        <button
+                                class="border border-purple-400/20 rounded-full px-5 md:px-7 py-2 text-sm md:text-md gradient-icon">
+                                About Company
+                        </button>
+                        <h2 class="text-2xl md:text-4xl font-bold leading-8 md:leading-12">
+                                QUALITY CONSULTATION FOR SECURE BUSINESS. WE HAVE 32 YEARS OF EXPERIENCE.
+                        </h2>
+                        <div class="flex flex-col md:flex-row gap-6 md:gap-10">
+                                <div
+                                        class="w-full md:w-1/3 h-fit relative gradient-bg py-6 md:py-10 rounded-lg text-center">
+                                        <i class="fa-solid fa-arrow-up absolute top-4 md:top-7 right-6 md:right-12 text-lg rotate-45"
                                                 style="color: #ffffff;"></i>
-                                        <h2 class="text-6xl font-bold text-white">29</h2>
+                                        <h2 class="text-4xl md:text-6xl font-bold text-white">29</h2>
                                         <p class="font-semibold text-white">Years Experience</p>
                                 </div>
-                                <div class="w-2/3 space-y-5">
-                                        <h3 class="text-3xl font-semibold underline">Mission & Vision</h3>
-                                        <p class="font-semibold leading-8 tracking-wide">Lorem ipsum dolor sit amet,
-                                                consectetur adi elit, <span class="font-bold underline">sed do eiusmod
-                                                        tempor
-                                                        incididunt</span> ut labore et dolore magna aliqua. Ut enim ad
-                                                minim veniam,
-                                                quis nostrud</p>
+                                <div class="w-full md:w-2/3 space-y-4 md:space-y-5">
+                                        <h3 class="text-2xl md:text-3xl font-semibold underline">Mission & Vision</h3>
+                                        <p class="font-semibold leading-6 md:leading-8 tracking-wide">
+                                                Lorem ipsum dolor sit amet, consectetur adi elit,
+                                                <span class="font-bold underline">sed do eiusmod tempor
+                                                        incididunt</span> ut labore et dolore magna aliqua.
+                                                Ut enim ad minim veniam, quis nostrud.
+                                        </p>
                                         <button
-                                                class="bg-main text-white border border-white rounded-lg py-4 px-8 text-sm font-serif font-semibold mt-16">LEARN
-                                                MORE ABOUT</button>
+                                                class="bg-main text-white border border-white rounded-lg py-3 md:py-4 px-6 md:px-8 text-xs md:text-sm font-serif font-semibold mt-10 md:mt-16">
+                                                LEARN MORE ABOUT
+                                        </button>
                                 </div>
                         </div>
                 </div>
@@ -145,7 +211,7 @@
         <!-- About Section End  -->
 
         <!-- Service Section Start  -->
-        <section class="w-full h-full bg-[#fff0fa] flex flex-col justify-center items-center gap-12 text-black pt-20"
+        <section class="w-full h-full bg-[#fff0fa] flex flex-col justify-center items-center gap-12 text-black pt-20 mt-8 md:mt-0"
                 style="background-image: url('/src/img/service__bg.png');">
 
                 <div class="flex flex-col justify-center items-center space-y-8">
@@ -156,7 +222,7 @@
                         </h2>
                 </div>
 
-                <div class="flex justify-between items-center gap-10">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-10 space-y-5 md:space-y-0">
                         <div
                                 class="w-96 h-full bg-white py-12 px-14 flex flex-col rounded-lg space-y-6 hover:bg-gradient-to-r hover:from-[#00229e] hover:via-[#6e1299] hover:via-[#610c88] hover:to-[#fe0094] transition duration-300">
                                 <div class="flex justify-between items-center">
@@ -208,10 +274,10 @@
                 </div>
 
 
-                <div class="w-full h-[90vh] flex justify-center items-center px-80 py-44">
+                <div class="w-full lg:h-[90vh] flex justify-center items-center lg:px-80 lg:py-44 p-4">
                         <div class="relative w-full h-full bg-cover bg-center bg-blend-overlay bg-[#0c0e2baf] shadow-2xl shadow-purple-900/10 rounded-lg"
                                 style="background-image: url('/src/img/video__3.webp');">
-                                <h2 class="text-9xl px-28 py-28 z-10 text-white stroke-text">
+                                <h2 class="text-6xl lg:text-9xl px-8 lg:px-28 py-28 z-10 text-white stroke-text">
                                         INTRO <br> <span class="px-44">VIDEO</span>
                                 </h2>
 
@@ -221,10 +287,15 @@
                                                 color: transparent;
                                         }
                                 </style>
-                                <img src="./src/img/video__4.webp" alt="Video_Main" class="absolute top-12 right-20">
-                                <div
-                                        class="bg-white w-28 h-28 rounded-full absolute top-52 right-52 flex justify-center items-center hover:bg-pink-600">
-                                        <i class="fa-solid fa-play" style="color: #fa3200;"></i>
+
+                                <div>
+
+                                        <img src="./src/img/video__4.webp" alt="Video_Main"
+                                                class="absolute top-[20%] right-[20%] hidden md:block">/
+                                        <div
+                                                class="bg-white w-14 h-14 md:w-28 md:h-28 rounded-full absolute top-[50%] right-[60%] flex justify-center items-center hover:bg-pink-600">
+                                                <i class="fa-solid fa-play" style="color: #fa3200;"></i>
+                                        </div>
                                 </div>
                         </div>
                 </div>
@@ -233,11 +304,11 @@
         <!-- Service Section End  -->
 
         <!-- Statstics Section Start -->
-        <section class="w-full gradient-bg h-36 flex justify-between items-center px-72">
+        <section class="w-full gradient-bg h-36 flex justify-between items-center lg:px-72">
 
                 <div class="text-white text-center">
-                        <h2 class="text-3xl font-bold">835+</h2>
-                        <p class="text-xl font-medium">Total Products</p>
+                        <h2 class="text-2xl lg:text-3xl font-bold">835+</h2>
+                        <p class="text-lg lg:text-xl font-medium">Total Products</p>
                 </div>
 
                 <div>
@@ -245,8 +316,8 @@
                 </div>
 
                 <div class="text-white text-center">
-                        <h2 class="text-3xl font-bold">6246+</h2>
-                        <p class="text-xl font-medium">Project Completed</p>
+                        <h2 class="text-2xl lg:text-3xl font-bold">6246+</h2>
+                        <p class="text-lg lg:text-xl font-medium">Project Completed</p>
                 </div>
 
                 <div>
@@ -254,8 +325,8 @@
                 </div>
 
                 <div class="text-white text-center">
-                        <h2 class="text-3xl font-bold">2000+</h2>
-                        <p class="text-xl font-medium">Happy Customers</p>
+                        <h2 class="text-2xl lg:text-3xl font-bold">2000+</h2>
+                        <p class="text-lg lg:text-xl font-medium">Happy Customers</p>
                 </div>
 
                 <div>
@@ -263,16 +334,15 @@
                 </div>
 
                 <div class="text-white text-center">
-                        <h2 class="text-3xl font-bold">60+</h2>
-                        <p class="text-xl font-medium">Team Members</p>
+                        <h2 class="text-2xl lg:text-3xl font-bold">60+</h2>
+                        <p class="text-lg lg:text-xl font-medium">Team Members</p>
                 </div>
 
         </section>
         <!-- Statstics Section End -->
 
         <!-- Team Section Start  -->
-        <section class="px-72 text-center bg-white text-black py-20">
-
+        <section class="lg:px-72 text-center bg-white text-black py-20 flex flex-col justify-center items-center">
 
                 <div class="flex flex-col justify-center items-center space-y-8">
                         <button class="border border-purple-400/20 rounded-full px-7 py-1 text-lg gradient-icon">Our
@@ -283,7 +353,7 @@
                 </div>
 
 
-                <div class="flex gap-10 mt-40">
+                <div class="flex flex-col md:flex-row space-y-20 gap-10 lg:mt-40 justify-center items-center mt-24">
 
                         <div
                                 class="h-80 w-72 bg-white border border-purple-400/20 rounded-lg relative pt-36 px-10 space-y-2 ">
@@ -373,19 +443,21 @@
         <!-- Team Section End  -->
 
         <!-- Project Section Start  -->
-        <section class="w-full h-screen relative text-black mb-28">
-                <div class="w-full h-2/3 bg-[#fff0fa]"></div>
-                <div class="w-full h-1/3 bg-white"></div>
+        <section class="w-full lg:h-screen relative text-black lg:mb-28 flex flex-col justify-center items-center">
+                <div class="w-full h-2/3 bg-[#fff0fa] hidden md:block"></div>
+                <div class="w-full h-1/3 bg-white hidden md:block"></div>
 
 
-                <img src="./src/img/project__small__img.webp" alt="project_Icons" class="absolute top-[17%] left-[8%]">
                 <img src="./src/img/project__small__img.webp" alt="project_Icons"
-                        class="absolute top-[17%] right-[11%] rotate-90">
+                        class="absolute top-[17%] left-[8%] hidden md:block">
+                <img src="./src/img/project__small__img.webp" alt="project_Icons"
+                        class="absolute top-[17%] right-[11%] rotate-90 hidden md:block">
 
 
                 <div
-                        class="w-[78vw] bg-white px-28 py-20 absolute top-[20%] right-[12%] shadow-2xl shadow-purple-400/10 flex flex-col justify-between items-center space-y-10 rounded-lg">
-                        <div class="flex justify-between items-center gap-10 space-y-8">
+                        class="w-[78vw] bg-white px-7 py-16 lg:px-28 lg:py-20 md:absolute top-[20%] right-[12%] shadow-2xl shadow-purple-400/10 flex flex-col justify-between items-center space-y-10 rounded-lg">
+
+                        <div class="flex flex-col md:flex-row justify-between items-center gap-10 space-y-8">
                                 <div class="w-full">
                                         <button
                                                 class="border border-purple-400/20 rounded-full px-7 py-1 text-lg gradient-icon">Our
@@ -407,7 +479,7 @@
                                 </div>
                         </div>
 
-                        <div class="flex justify-between items-center gap-5">
+                        <div class="flex flex-col md:flex-row justify-between items-center gap-5">
 
                                 <div class="relative shadow-xl rounded-2xl overflow-hidden">
                                         <img src="./src/img/project__5.webp" alt="Business Process Optimization"
@@ -467,8 +539,10 @@
         </section>
         <!-- Project Section End  -->
 
+
         <!-- Testimonial Section Start  -->
-        <section class="px-72 text-center bg-white text-black py-20 border-t border-dashed border-purple-400/20 ">
+        <section
+                class="w-full h-full flex-col justify-center items-center px-10 lg:px-72 text-center bg-white text-black py-20 border-t border-dashed border-purple-400/20 ">
                 <div class="flex flex-col justify-center items-center space-y-6 relative">
                         <button class="border border-purple-400/20 rounded-full px-7 py-1 text-lg">Happy
                                 Customers</button>
@@ -476,12 +550,13 @@
                                 <br><span>SERVICES.</span>
                         </h2>
                         <img src="./src/img/testimonial__small__img__4.webp" alt="UpperShape"
-                                class="absolute top-5 -left-5">
+                                class="absolute top-5 -left-5 hidden lg:block">
                 </div>
 
-                <div class="w-full flex gap-10 mt-10 mb-20">
+                <div
+                        class="w-full flex flex-col md:flex-row justify-center items-center gap-10 mt-10 mb-20 space-y-10 lg:space-y-0">
 
-                        <div class="h-80 w-1/2 bg-[#fff0fa] rounded-lg p-10">
+                        <div class="lg:h-80 lg:w-1/2 bg-[#fff0fa] rounded-lg p-10">
                                 <p
                                         class="text-[21px] font-medium italic underline tracking-wider leading-10 text-black/60">
                                         Lorem
@@ -497,7 +572,7 @@
                                 </div>
                         </div>
 
-                        <div class="h-80 w-1/2 bg-[#fff0fa] rounded-lg p-10">
+                        <div class="lg:h-80 lg:w-1/2 bg-[#fff0fa] rounded-lg p-10">
                                 <p
                                         class="text-[21px] font-medium italic underline tracking-wider leading-10 text-black/60">
                                         Lorem
@@ -521,10 +596,11 @@
         <!-- Testimonial Section End  -->
 
         <!-- Blogs Section Start  -->
-        <section class="w-full h-auto text-black px-72" style="background-image: url('/src/img/blog__bg.png');">
+        <section class="w-full h-auto text-black px-10 lg:px-72"
+                style="background-image: url('/src/img/blog__bg.png');">
                 <div class="w-full flex flex-col justify-between items-center pt-20 pb-32">
 
-                        <div class="w-full flex justify-between items-center gap-10 space-y-8">
+                        <div class="w-full flex flex-col md:flex-row justify-between items-center gap-10 space-y-8">
                                 <div class="w-full">
                                         <button class="border border-white text-white rounded-full px-7 py-1 text-lg">Blog
                                                 Post</button>
@@ -536,16 +612,17 @@
                                         <img src="./src/img/blog__icon.webp" alt="arrow_icons">
                                 </div>
 
-                                <div class="w-72 h-72 flex justify-center items-center">
+                                <div class="w-72 h-72 justify-center items-center hidden lg:flex">
                                         <img src="./src/img/project__1.webp" alt="Main Badge"
                                                 class="relative animate-rotate360">
                                         <img src="/src/img/brand__badge__inner.webp" alt="Inner" class="absolute">
                                 </div>
                         </div>
 
-                        <div class="w-full h-full flex gap-10 justify-between items-center">
+                        <div
+                                class="w-full h-full flex md:flex-row flex-col gap-10 justify-between items-center space-y-8 lg:space-y-0">
                                 <div
-                                        class="bg-gray-200/20 w-1/3 h-auto px-8 pt-8 pb-2 rounded-lg space-y-8 relative hover:bg-gradient-to-r hover:from-[#00229e] hover:via-[#6e1299] hover:to-[#fe0094] transition duration-300 ">
+                                        class="bg-gray-200/20 lg:w-1/3 h-auto px-8 pt-8 pb-2 rounded-lg space-y-8 relative hover:bg-gradient-to-r hover:from-[#00229e] hover:via-[#6e1299] hover:to-[#fe0094] transition duration-300 ">
                                         <img src="./src/img/blog__4.webp" alt="blog_1" class="mb-20">
                                         <h2 class="uppercase text-2xl font-bold text-white">5 Strategies to Tr....</h2>
                                         <p class="text-[18px] text-white">Lorem ipsum dolor sit amet, consectetur
@@ -563,7 +640,7 @@
                                 </div>
 
                                 <div
-                                        class="bg-gray-200/20 w-1/3 h-auto px-8 pt-8 pb-2 rounded-lg space-y-8 relative hover:bg-gradient-to-r hover:from-[#00229e] hover:via-[#6e1299] hover:to-[#fe0094] transition duration-300 ">
+                                        class="bg-gray-200/20 lg:w-1/3 h-auto px-8 pt-8 pb-2 rounded-lg space-y-8 relative hover:bg-gradient-to-r hover:from-[#00229e] hover:via-[#6e1299] hover:to-[#fe0094] transition duration-300 ">
                                         <img src="./src/img/blog__5.webp" alt="blog_1" class="mb-20">
                                         <h2 class="uppercase text-2xl font-bold text-white">Why Every Startup ....</h2>
                                         <p class="text-[18px] text-white">Lorem ipsum dolor sit amet, consectetur
@@ -581,7 +658,7 @@
                                 </div>
 
                                 <div
-                                        class="bg-gray-200/20 w-1/3 h-auto px-8 pt-8 pb-2 rounded-lg space-y-8 relative hover:bg-gradient-to-r hover:from-[#00229e] hover:via-[#6e1299] hover:to-[#fe0094] transition duration-300 ">
+                                        class="bg-gray-200/20 lg:w-1/3 h-auto px-8 pt-8 pb-2 rounded-lg space-y-8 relative hover:bg-gradient-to-r hover:from-[#00229e] hover:via-[#6e1299] hover:to-[#fe0094] transition duration-300 ">
                                         <img src="./src/img/blog__6.webp" alt="blog_1" class="mb-20">
                                         <h2 class="uppercase text-2xl font-bold text-white">How Marketing Cons....</h2>
                                         <p class="text-[18px] text-white">Lorem ipsum dolor sit amet, consectetur
@@ -608,10 +685,11 @@
         <!-- Blogs Section End  -->
 
         <!-- Footer Start  -->
-        <footer class="bg-[#fff0fa] pt-40 px-72">
-                <div class="mx-auto grid grid-cols-1 md:grid-cols-5  text-black pb-24">
+        <footer class="bg-[#fff0fa] p-10 lg:pt-40 lg:px-72">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 text-black pb-24 gap-8">
 
-                        <div class="space-y-8 pr-8 col-span-2">
+                        <!-- Logo & Socials -->
+                        <div class="space-y-8 pr-8 md:col-span-2">
                                 <div class="flex items-center space-x-2">
                                         <img src="./src/img/Logo_2.webp" alt="Logo" class="w-44 pr-4">
                                 </div>
@@ -619,83 +697,97 @@
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                         incididunt labore et dolore magna aliqua.
                                 </p>
-                                <div class="flex space-x-3 mt-4">
+                                <div class="flex flex-wrap gap-3 mt-4">
                                         <a href="#"
-                                                class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-black"><i
-                                                        class="text-[14px] fab fa-facebook-f"></i></a>
+                                                class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-black">
+                                                <i class="text-[14px] fab fa-facebook-f"></i>
+                                        </a>
                                         <a href="#"
-                                                class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-black"><i
-                                                        class="text-[14px] fab fa-twitter"></i></a>
+                                                class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-black">
+                                                <i class="text-[14px] fab fa-twitter"></i>
+                                        </a>
                                         <a href="#"
-                                                class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-black"><i
-                                                        class="text-[14px] fab fa-skype"></i></a>
+                                                class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-black">
+                                                <i class="text-[14px] fab fa-skype"></i>
+                                        </a>
                                         <a href="#"
-                                                class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-black"><i
-                                                        class="text-[14px] fab fa-linkedin-in"></i></a>
+                                                class="w-12 h-12 flex items-center justify-center rounded-full bg-white text-black">
+                                                <i class="text-[14px] fab fa-linkedin-in"></i>
+                                        </a>
                                 </div>
                         </div>
 
+                        <!-- Bottom section with better responsiveness -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full md:col-span-3">
 
-                        <div>
-                                <h3 class="w-fit font-bold mb-10  border-b-2  text-lg">QUICK LINKS :</h3>
-                                <ul class="space-y-4 text-black">
-                                        <li><a href="#" class="hover:text-white font-medium text-lg">Privacy &
-                                                        policy</a></li>
-                                        <li><a href="#" class="hover:text-white font-medium text-lg">Terms &
-                                                        conditions</a></li>
-                                        <li><a href="#" class="hover:text-white font-medium text-lg">FAQ</a></li>
-                                        <li><a href="#" class="hover:text-white font-medium text-lg">Customer
-                                                        support</a></li>
-                                        <li><a href="#" class="hover:text-white font-medium text-lg">Contact us</a></li>
-                                </ul>
-                        </div>
-
-
-                        <div class="space-y-8">
-                                <h3 class="w-fit font-bold mb-10 border-b-2 text-lg">SUBSCRIP NEWSLETTER :
-                                </h3>
-                                <input type="email" placeholder="Enter your email"
-                                        class="w-full px-4 py-2 rounded-md bg-white text-black/80">
-                                <button
-                                        class="mt-3 w-fit py-5 px-9 text-sm font-semibold font-serif gradient-bg rounded-md text-white">SUBSCRIBE
-                                        NOW</button>
-                        </div>
-
-
-                        <div>
-                                <h3 class="w-fit font-bold mb-10 border-b-2  text-lg">OUR GALLERY:</h3>
-                                <div class="grid grid-cols-3 gap-2">
-                                        <img src="src\img\footer__Small__1.webp" alt="Gallery"
-                                                class="w-20 h-20 rounded-md">
-                                        <img src="src\img\footer__Small__2.webp" alt="Gallery"
-                                                class="w-20 h-20 rounded-md">
-                                        <img src="src\img\footer__Small__3.webp" alt="Gallery"
-                                                class="w-20 h-20 rounded-md">
-                                        <img src="src\img\footer__Small__4.webp" alt="Gallery"
-                                                class="w-20 h-20 rounded-md">
-                                        <img src="src\img\footer__Small__5.webp" alt="Gallery"
-                                                class="w-20 h-20 rounded-md">
-                                        <img src="src\img\footer__Small__1.webp" alt="Gallery"
-                                                class="w-20 h-20 rounded-md">
+                                <!-- Quick Links -->
+                                <div class="text-center sm:text-left">
+                                        <h3 class="w-fit font-bold mb-6 border-b-2 text-lg">QUICK LINKS :</h3>
+                                        <ul class="space-y-4 text-black text-start">
+                                                <li><a href="#" class="hover:text-white font-medium text-lg">Privacy &
+                                                                policy</a></li>
+                                                <li><a href="#" class="hover:text-white font-medium text-lg">Terms &
+                                                                conditions</a></li>
+                                                <li><a href="#" class="hover:text-white font-medium text-lg">FAQ</a>
+                                                </li>
+                                                <li><a href="#" class="hover:text-white font-medium text-lg">Customer
+                                                                support</a></li>
+                                                <li><a href="#" class="hover:text-white font-medium text-lg">Contact
+                                                                us</a></li>
+                                        </ul>
                                 </div>
+
+                                <!-- Subscription -->
+                                <div class="text-center sm:text-left space-y-6">
+                                        <h3 class="w-fit font-bold mb-6 border-b-2 text-lg">SUBSCRIBE NEWSLETTER :</h3>
+                                        <input type="email" placeholder="Enter your email"
+                                                class="w-full px-4 py-2 rounded-md bg-white text-black/80">
+                                        <button
+                                                class="mt-3 w-full sm:w-fit py-4 px-6 text-sm font-semibold font-serif gradient-bg rounded-md text-white">
+                                                SUBSCRIBE NOW
+                                        </button>
+                                </div>
+
+                                <!-- Gallery -->
+                                <div class="text-center sm:text-left">
+                                        <h3 class="w-fit font-bold mb-6 border-b-2 text-lg">OUR GALLERY:</h3>
+                                        <div class="grid grid-cols-3 gap-2 justify-center sm:justify-start">
+                                                <img src="src/img/footer__Small__1.webp" alt="Gallery"
+                                                        class="w-20 h-20 rounded-md">
+                                                <img src="src/img/footer__Small__2.webp" alt="Gallery"
+                                                        class="w-20 h-20 rounded-md">
+                                                <img src="src/img/footer__Small__3.webp" alt="Gallery"
+                                                        class="w-20 h-20 rounded-md">
+                                                <img src="src/img/footer__Small__4.webp" alt="Gallery"
+                                                        class="w-20 h-20 rounded-md">
+                                                <img src="src/img/footer__Small__5.webp" alt="Gallery"
+                                                        class="w-20 h-20 rounded-md">
+                                                <img src="src/img/footer__Small__1.webp" alt="Gallery"
+                                                        class="w-20 h-20 rounded-md">
+                                        </div>
+                                </div>
+
                         </div>
                 </div>
-
         </footer>
         <!-- Footer End  -->
 
         <!-- Bottom Bar -->
-        <div class="pl-72 bg-main flex justify-between items-center text-sm relative">
-                <div class="w-1 h-[100px] bg-white absolute left-[50%] -bottom-1 rotate-[28deg] z-100"></div>
+        <div class="p-4 lg:p-0 lg:pl-72 bg-main flex justify-between items-center text-sm relative">
+                <div class="lg:w-2/5 h-full">
+                        <p class="text-white font-semibold text-lg">Copyright © 2025 <span
+                                        class="font-bold text-purple-800">BASTUN.</span> All Right Reserved </p>
+                        <p
+                                class="md:hidden block p-4 mt-2 w-full gradient-bg rounded-xl text-white text-center text-lg">
+                                <a href="#" class="hover:underline">Privacy & Policy</a> ||
+                                <a href="#" class="hover:underline">Terms & Conditions</a>
 
-                <div class="w-2/5 h-full">
-                        <p class="text-white font-semibold text-lg">
-                                Copyright © 2025 <span class="font-bold text-purple-800">BASTUN.</span> All Right
-                                Reserved
                         </p>
                 </div>
 
-                <div class="relative w-3/5 h-full text-end">
+                <div class="w-1 h-[90px] bg-white absolute left-[50%] -bottom-1 rotate-[28deg] z-100 hidden lg:block">
+                </div>
+                <div class="relative w-3/5 h-full text-end hidden lg:block">
                         <div class="gradient-bg text-lg font-semibold text-white py-6 px-6 relative z-10"
                                 style="clip-path: polygon(4% 0%, 100% 0%, 100% 100%, 0% 100%);">
                                 <a href="#" class="hover:underline">Privacy & Policy</a> ||
@@ -706,28 +798,52 @@
 
         <!-- Navbar Position Query -->
         <script>
+                // window.addEventListener("scroll", function () {
+                //         var navbar = document.getElementById("navbar");
+                //         var navbar_2 = document.getElementById("navbar_main");
+                //         var topbar = document.getElementById("topbar");
+
+                //         if (window.scrollY > 50) {
+                //                 navbar.classList.remove("px-72");
+                //                 navbar_2.classList.add("px-72", "fixed", "top-0");
+                //                 navbar_2.classList.remove("rounded-lg");
+
+                //                 topbar.classList.add("hidden");
+                //                 topbar.classList.remove("flex", "fixed");
+
+                //         } else {
+                //                 navbar.classList.add("px-72");
+                //                 navbar_2.classList.remove("px-72", "fixed", "top-0", "rounded-lg");
+                //                 navbar_2.classList.add("rounded-lg");
+
+                //                 topbar.classList.remove("hidden");
+                //                 topbar.classList.add("flex", "fixed");
+                //         }
+                // });
+                // 
+                document.getElementById("menu-toggle").addEventListener("click", function () {
+                        document.getElementById("mobile-menu").classList.remove("hidden");
+                });
+                document.getElementById("menu-close").addEventListener("click", function () {
+                        document.getElementById("mobile-menu").classList.add("hidden");
+                });
+
                 window.addEventListener("scroll", function () {
                         var navbar = document.getElementById("navbar");
                         var navbar_2 = document.getElementById("navbar_main");
-                        var topbar = document.getElementById("topbar");
 
                         if (window.scrollY > 50) {
-                                navbar.classList.remove("px-72");
-                                navbar_2.classList.add("px-72", "fixed", "top-0");
-                                navbar_2.classList.remove("rounded-lg");
-
-                                topbar.classList.add("hidden");
-                                topbar.classList.remove("flex", "fixed");
-
+                                navbar.classList.remove("lg:px-72");
+                                navbar_2.classList.add("lg:px-72", "fixed", "top-0");
+                                navbar_2.classList.remove("lg:rounded-lg");
                         } else {
-                                navbar.classList.add("px-72");
-                                navbar_2.classList.remove("px-72", "fixed", "top-0", "rounded-lg");
-                                navbar_2.classList.add("rounded-lg");
-
-                                topbar.classList.remove("hidden");
-                                topbar.classList.add("flex", "fixed");
+                                navbar.classList.add("lg:px-72");
+                                navbar_2.classList.remove("lg:px-72", "fixed", "top-0", "lg:rounded-lg");
+                                navbar_2.classList.add("lg:rounded-lg");
                         }
                 });
         </script>
+
 </body>
+
 </html>
